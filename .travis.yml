@@ -16,4 +16,4 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push farouqu/simple-express
+  - docker push farouqu/simple-reverse-proxy
