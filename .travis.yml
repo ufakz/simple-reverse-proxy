@@ -12,7 +12,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-reverse-proxy .
-  - docker tag simple-express farouqu/simple-reverse-proxy:latest
+  - docker tag simple-reverse-proxy farouqu/simple-reverse-proxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
